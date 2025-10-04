@@ -1,0 +1,32 @@
+
+{
+  "name": "baseline-refactor-assistant",
+  "displayName": "Baseline Refactor Assistant",
+  "description": "Detects non-Baseline web features for universal browser compatibility",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:css"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "baseline.scanFile",
+        "title": "Baseline: Scan for Issues"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4"
+  }
+}
